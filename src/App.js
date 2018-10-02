@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import './style.css';
-import logo_left from './images/logo-left.png';
-import logo_right from './images/logo-right.png';
-import logo from './images/logo.gif';
 import footer from './images/footer.png';
 import Cloud from './Components/Cloud';
 import ResponsivePlayer from './Components/ResponsivePlayer';
 import  ParallaxLayer from './Components/ParallaxLayer';
 import FeatureBox from './Components/FeatureBox';
 import Gallery from './Components/Gallery';
-import BackgroundParallaxLayer from './Components/BackgroundParallaxLayer';
+import BannerLogo from './Components/BannerLogo';
 
 const GALLERY_IMAGES = [
 	{ src: "screenshots/steam_store1.png",  thumbnail: "screenshots/steam_store1.png", caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
@@ -38,14 +35,9 @@ class App extends Component {
                 <ParallaxLayer speed={.20} yOffset={0.20}><img className="city" src={footer} alt="Vancouver Cityscape Footer"/></ParallaxLayer> 
 
                 <div className="header">
-                    <div className="banner-container">
-                        <img src={logo_left} alt="background"/>
-                        <div id="logo">
-                            <img src={logo} alt="Overclocked"/>
-                        </div>
-                        <img src={logo_right} alt="background"/>
-                    </div>
-                </div>          
+                    <BannerLogo />
+                </div>     
+
                 <div className="container">
                     <ResponsivePlayer />
                     <div><p className="bold">Experience a rhythmic blend of combat and platforming as you fight to unravel a mystery that threatens to tear your city apart.</p></div>
