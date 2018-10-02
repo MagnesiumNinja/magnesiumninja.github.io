@@ -34,10 +34,10 @@ export default class ParallaxLayer extends React.Component {
         let html = document.documentElement;
 
         let height = Math.max( body.scrollHeight, body.offsetHeight, 
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+                               html.clientHeight, html.scrollHeight, html.offsetHeight );
 
         let offset = window.scrollY + ((yOffset * height)- window.scrollY * speed);
-
+        
         this.setState({ transform: offset, pageHeight: height});
     }
 

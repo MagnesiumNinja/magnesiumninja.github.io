@@ -14,11 +14,13 @@ let clouds = [
     CloudDaytime5
 ];
 
+/** Cloud Constants  */
 const MIN_DRIFT = 2.40;
 const MAX_DRIFT = 10.8;
 
 const MIN_SCALE = 0.4;
 const MAX_SCALE = 1.6;
+const NATIVE_RES = 1366;
 
 export default class Cloud extends React.Component {
     constructor(props) {
@@ -29,6 +31,7 @@ export default class Cloud extends React.Component {
                         speed: this.deriveSpeed(this.props.depth),
                         scale: this.deriveSize(this.props.depth)
                     };
+        
     }
 
     deriveTint() {
@@ -44,7 +47,7 @@ export default class Cloud extends React.Component {
     }
 
     deriveSize(depth ) {
-        return this.lerp(MIN_SCALE, MAX_SCALE, 1 - depth);
+        return this.lerp(MIN_SCALE, MAX_SCALE, 1 - depth) * Math.min(1, (window.innerWidth / NATIVE_RES));
     }
 
     lerp(value1, value2, amount) {

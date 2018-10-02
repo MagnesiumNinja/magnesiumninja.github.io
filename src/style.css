@@ -81,17 +81,7 @@ img {
     margin-right: auto;
 }
 
-
-@keyframes slide {
-    from {
-        left: -40%;
-    }
-    to {
-        left: 100%;
-    }
-}
-
-.container {
+.container, .footer {
     position: relative;
     z-index: 5;
 }
@@ -187,7 +177,19 @@ img {
     cursor: pointer;
 }
 
+/*******************************/
+/*      Parallax Layers        */
+/*******************************/
 .city {
     position: absolute;
     width: 100%;
+}
+
+@keyframes slide {
+    from {
+        left: -40%;
+    }
+    to {
+        left: 100%;
+    }
 }
