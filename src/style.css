@@ -12,23 +12,24 @@ html, body
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    overflow: hidden;
+    overflow: hidden; 
     height: 100%;
+}
+
+@font-face {
+    font-family: Gobold;
+    src: url("fonts/gobold_regular.ttf");
+}
+
+@font-face {
+    font-family: SuiGeneris;
+    src: url("fonts/sui_generis.ttf");
 }
 
 
 span, p {
     color: #FFF;    
-}
-
-@font-face {
-    font-family: Gobold, Arial, Helvetica, sans-serif;
-    src: url("fonts/Gobold Regular.ttf");
-}
-
-@font-face {
-    font-family: SuiGeneris, Arial, Helvetica, sans-serif;
-    src: url("fonts/sui generis rg.ttf");
+    font-family: "SuiGeneris";
 }
 
 p.bold {
@@ -44,6 +45,7 @@ h4 {
     color: red;
     line-height: 1.5em;
     font-size: 1.5em;
+    font-family: Gobold;
 }
 
 img {
@@ -95,12 +97,12 @@ img {
 /* FeatureBox / LinkBox styling */
 /*********************************/
 .featureBox {
-    background: rgba(0, 0, 0, 0.70);
+    background: rgba(0, 0, 0, 0.40);
     padding: 5%;
     width: 100%;
     text-align: justify;
     margin: 10vh 0;
-    border: 2px solid rgba(255, 255, 255, 0.70);
+    border: 2px solid rgba(255, 255, 255, 0.40);
 }
 
 .featureBox > span {
@@ -138,12 +140,12 @@ img {
 /* Gallery Styling */
 /*******************/
 .gallery {
-    background: rgba(0, 0, 0, 0.70);
+    background: rgba(0, 0, 0, 0.40);
     overflow: hidden;
     padding: 5%;
     width: 100%;
     margin: 10vh 0;
-    border: 2px solid rgba(255, 255, 255, 0.70);
+    border: 2px solid rgba(255, 255, 255, 0.40);
     display: table;
     table-layout: fixed;
 }
@@ -177,20 +179,12 @@ img {
     cursor: pointer;
 }
 
-/*******************************/
-/*      Parallax Layers        */
-/*******************************/
-.city {
-    position: absolute;
-    width: 100%;
-}
-
 @keyframes slide {
     from {
-        left: -40%;
+        left: -800px;
     }
     to {
-        left: 100%;
+        left: 120vw;
     }
 }
 
@@ -245,4 +239,10 @@ img {
 
 #clouds { 
     z-index: -1;
+}
+
+#mainContent {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background: url("images/trainingRoom.png") repeat; 
 }
