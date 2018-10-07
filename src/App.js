@@ -29,10 +29,12 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <ParallaxLayer speed={0.3} yOffset={.10}><Cloud depth={0.3}xOffset={0.7}/></ParallaxLayer>
-                <ParallaxLayer speed={0.10} yOffset={0.15}><Cloud depth={0.1} xOffset={0.2}/></ParallaxLayer>
-                <ParallaxLayer speed={0.05} yOffset={0.30}><Cloud depth={0.05} xOffset={0.5}/></ParallaxLayer>
-                <ParallaxLayer speed={.20} yOffset={0.20}><img className="city" src={footer} alt="Vancouver Cityscape Footer"/></ParallaxLayer> 
+                <div>
+                    <ParallaxLayer speed={0.3} yOffset={.10}><Cloud depth={0.3}xOffset={0.7}/></ParallaxLayer>
+                    <ParallaxLayer speed={0.10} yOffset={0.15}><Cloud depth={0.1} xOffset={0.2}/></ParallaxLayer>
+                    <ParallaxLayer speed={0.05} yOffset={0.30}><Cloud depth={0.05} xOffset={0.5}/></ParallaxLayer>
+                    {/* <ParallaxLayer speed={.20} yOffset={0.20}><img className="city" src={footer} alt="Vancouver Cityscape Footer"/></ParallaxLayer> */}
+                </div>
 
                 <div className="header">
                     <BannerLogo />
