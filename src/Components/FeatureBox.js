@@ -47,7 +47,7 @@ export default class FeatureBox extends React.Component {
         if (this.props.imgLeft) {
             return (
                 <span className="row">
-                    { this.renderImage() }
+                    {/* { this.renderImage() } */}
                     { this.renderText() }
                 </span>
             );
@@ -56,7 +56,7 @@ export default class FeatureBox extends React.Component {
             return (
                 <span className="row">
                     { this.renderText() }
-                    { this.renderImage() }
+                    {/* { this.renderImage() } */}
                 </span>
             );
         }

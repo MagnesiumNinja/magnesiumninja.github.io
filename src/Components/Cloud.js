@@ -60,13 +60,13 @@ export default class Cloud extends React.Component {
 
     render() {
         const styles = { 
-            position: 'absolute',  
+            position: 'relative',  
             animation: `slide ${this.state.speed}s linear infinite`,
             animationDelay: `-${this.state.speed * this.props.xOffset}s`,
             transform: `scale(${this.state.scale}, ${this.state.scale})`,
             msTransform: `scale(${this.state.scale}, ${this.state.scale})`,
             WebkitTransform: `scale(${this.state.scale}, ${this.state.scale})`,
-            zIndex: '-1'
+            top: `${this.props.yOffset}%`
         };
 
         return (
