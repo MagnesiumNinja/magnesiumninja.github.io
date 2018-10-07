@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.40ac550d.css",
-  "main.css.map": "static/css/main.40ac550d.css.map",
-  "main.js": "static/js/main.92959962.js",
-  "main.js.map": "static/js/main.92959962.js.map",
+  "main.css": "static/css/main.fef23cce.css",
+  "main.css.map": "static/css/main.fef23cce.css.map",
+  "main.js": "static/js/main.fad08cbc.js",
+  "main.js.map": "static/js/main.fad08cbc.js.map",
   "static\\media\\Challenges.gif": "static/media/Challenges.9f5364fb.gif",
   "static\\media\\Combat.gif": "static/media/Combat.74314d62.gif",
   "static\\media\\Dialogue.gif": "static/media/Dialogue.ef4e8dd6.gif",
@@ -27,5 +27,10 @@
   "static\\media\\steam_store8.png": "static/media/steam_store8.0125fa89.png",
   "static\\media\\sui_generis.ttf": "static/media/sui_generis.5a7db2db.ttf",
   "static\\media\\trainingRoom.png": "static/media/trainingRoom.da1c967b.png",
-  "static\\media\\twitter.svg": "static/media/twitter.116bea77.svg"
+  "static\\media\\tumblr.png": "static/media/tumblr.af96aa10.png",
+  "static\\media\\tumblr.psd": "static/media/tumblr.61af08fe.psd",
+  "static\\media\\tumblr_hover.png": "static/media/tumblr_hover.35bf2969.png",
+  "static\\media\\twitter.png": "static/media/twitter.1a49d497.png",
+  "static\\media\\twitter.psd": "static/media/twitter.019034ac.psd",
+  "static\\media\\twitter_hover.png": "static/media/twitter_hover.c1ae6e73.png"
 }
