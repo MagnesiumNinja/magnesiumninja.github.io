@@ -7,6 +7,7 @@ import ResponsivePlayer from './Components/ResponsivePlayer';
 import FeatureBox from './Components/FeatureBox';
 import Gallery from './Components/Gallery';
 import BannerLogo from './Components/BannerLogo';
+import HoverableImage from './Components/HoverableImage';
 
 const GALLERY_IMAGES = [
 	{ src: "screenshots/steam_store1.png",  thumbnail: "screenshots/steam_store1.png", caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
@@ -31,6 +32,14 @@ class App extends Component {
                 <div class="parallax">
                     <div class="parallax__group">
                         <div class="parallax__layer parallax__layer--base">
+                            <div class="socialMediaLinks">
+                                <a href="https://twitter.com/magnesiumninja">
+                                <HoverableImage className="socialMediaIcon" mainImg="twitter.png" hoverImg="twitter_hover.png" alt="Twitter"/>
+                                </a>
+                                <a href="https://magnesiumninja.tumblr.com">
+                                    <HoverableImage className="socialMediaIcon" mainImg="tumblr.png" hoverImg="tumblr_hover.png" alt="Tumblr"/>
+                                </a>
+                            </div>
                             <div className="header">
                                 <BannerLogo />
                             </div>     
