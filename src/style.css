@@ -39,16 +39,6 @@ p.bold {
     text-shadow: 3px 3px 0 rgba(46, 46, 46, 0.7);
 }
 
-@media screen and (max-width: 800px) {
-    p.bold {
-        margin-top: 5vh;
-        font-family: Gobold;
-        font-weight: bold;
-        font-size: 1.5em;
-        text-shadow: 3px 3px 0 rgba(46, 46, 46, 0.7);
-    }
-}
-
 h4 {
     text-align: center;
     color: red;
@@ -117,8 +107,8 @@ img {
     padding-top: 15vw;
     /* Total hack for parallax issues. Needs to have at least something.. */
     padding-bottom: 0.01vw;
-    padding-left: 0vw;
-    padding-right: 0vw;
+    width: 102%;
+    left: -1%;
     background: url("images/trainingRoom.png") center repeat; 
 }
 
@@ -283,4 +273,27 @@ img {
 
 #clouds { 
     z-index: -1;
+}
+
+
+/***********************************************/
+/*              Mobile Styling                */
+/***********************************************/
+@media screen and (max-width: 800px) {
+    p.bold {
+        margin-top: 5vh;
+        font-family: Gobold;
+        font-weight: bold;
+        font-size: 1.5em;
+        text-shadow: 3px 3px 0 rgba(46, 46, 46, 0.7);
+    }
+
+    .socialMediaLinks {
+        position: absolute;
+        height: 50px;
+        z-index: 1;
+        float: right;
+        display: block;
+        width: 100%;
+    }
 }

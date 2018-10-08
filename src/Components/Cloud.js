@@ -32,8 +32,7 @@ export default class Cloud extends React.Component {
                         image: image,
                         speed: this.deriveSpeed(this.props.depth),
                         scale: this.deriveSize(this.props.depth)
-                    };
-        
+                    };        
     }
 
     deriveTint() {
@@ -49,7 +48,7 @@ export default class Cloud extends React.Component {
     }
 
     deriveSize(depth ) {
-        return this.lerp(MIN_SCALE, MAX_SCALE, 1 - depth) * Math.min(1, (window.innerWidth / NATIVE_RES));
+        return this.lerp(MIN_SCALE, MAX_SCALE, 1 - depth);
     }
 
     lerp(value1, value2, amount) {
