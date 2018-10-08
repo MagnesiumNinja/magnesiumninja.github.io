@@ -26,7 +26,6 @@ html, body
     src: url("fonts/sui_generis.ttf");
 }
 
-
 span, p {
     color: #FFF;    
     font-family: "SuiGeneris";
@@ -36,8 +35,18 @@ p.bold {
     margin-top: 5vh;
     font-family: Gobold;
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 2.25em;
     text-shadow: 3px 3px 0 rgba(46, 46, 46, 0.7);
+}
+
+@media screen and (max-width: 800px) {
+    p.bold {
+        margin-top: 5vh;
+        font-family: Gobold;
+        font-weight: bold;
+        font-size: 1.5em;
+        text-shadow: 3px 3px 0 rgba(46, 46, 46, 0.7);
+    }
 }
 
 h4 {
@@ -62,24 +71,11 @@ img {
     flex-direction: column;
     justify-content: center;
     position: relative;
+    margin-bottom: 50vh;
 }
 
-/*********************************/
-/*   Social Media Navigation     */
-/*********************************/
-.socialMediaLinks {
-    position: absolute;
-    height: 70px;
-    z-index: 1;
-    float: right;
-    display: block;
-    width: 100%;
-}
-
-.socialMediaIcon {
-    height: 100%;
-    padding: 10px;
-    float: right;
+#tagLine {
+    margin-bottom: 50vh;
 }
 
 /*********************************/
@@ -103,18 +99,42 @@ img {
     margin-right: auto;
 }
 
-.container, .footer {
+.container {
     position: relative;
     z-index: 5;
 }
 
+/** Video Player **/
 .player-wrapper {
-    margin-top: 7vh;
+    margin-top: 7vw;
     box-shadow: 0 0 140px rgba(0, 0, 0, 0.7);
+    margin-bottom: 4vw;
+}
+
+/** Content block **/
+#mainContent {
+    position: relative;
+    padding-top: 15vw;
+    /* Total hack for parallax issues. Needs to have at least something.. */
+    padding-bottom: 0.01vw;
+    padding-left: 0vw;
+    padding-right: 0vw;
+    background: url("images/trainingRoom.png") center repeat; 
+}
+
+#contentDivider {
+    position: absolute;
+    width: 100%;
+    height: 30vw;
+    top: -17vw;
+}
+
+.footer > p {
+    margin-bottom: 5px;
 }
 
 /*********************************/
-/* FeatureBox / LinkBox styling */
+/* FeatureBox Styling & Links    */
 /*********************************/
 .featureBox {
     background: rgba(0, 0, 0, 0.40);
@@ -126,15 +146,39 @@ img {
 }
 
 .featureBox > span {
-    margin-top: 1.5%;
-    margin-bottom: 1.5%;
+    display: flex;
+    align-items: center;
+}
+
+.featureBlurb {
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
 }
 
 .steamLink { 
-    width: 60%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
+
+/*********************************/
+/*   Social Media Navigation     */
+/*********************************/
+.socialMediaLinks {
+    position: absolute;
+    height: 70px;
+    z-index: 1;
+    float: right;
+    display: block;
+    width: 100%;
+}
+
+.socialMediaIcon {
+    height: 100%;
+    padding: 10px;
+    float: right;
+}
+
 
 /*******************/
 /* Gallery Styling */
@@ -239,10 +283,4 @@ img {
 
 #clouds { 
     z-index: -1;
-}
-
-#mainContent {
-    padding-top: 3%;
-    padding-bottom: 3%;
-    background: url("images/trainingRoom.png") repeat; 
 }

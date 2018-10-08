@@ -38,7 +38,9 @@ export default class FeatureBox extends React.Component {
     renderImage() {
         return (
             <span onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseHover} className="col-lg-6">
-                <img src={require(`../images/screenshots/${this.state.activeSrc}`)}  className="animScreenshot" alt="screenshot"/>
+                <a href={require(`../images/screenshots/${this.state.activeSrc}`)} target="_blank" rel="noopener noreferrer">
+                    <img src={require(`../images/screenshots/${this.state.activeSrc}`)}  className="animScreenshot" alt="screenshot"/>
+                </a>
             </span>
         );
     }
@@ -72,7 +74,7 @@ export default class FeatureBox extends React.Component {
 }
 
 FeatureBox.propTypes = {
-    staticSrc: PropTypes.string.isRequired.optional,
+    staticSrc: PropTypes.string,
     animSrc: PropTypes.string.isRequired,
     imgLeft: PropTypes.bool
 };

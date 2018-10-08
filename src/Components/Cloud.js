@@ -26,8 +26,10 @@ export default class Cloud extends React.Component {
     constructor(props) {
         super(props);
 
+        let image = (this.props.cloudType >= 0) ? clouds[this.props.cloudType] : this.pickCloudImage();
+        
         this.state = { depth: this.props.depth, 
-                        image: this.pickCloudImage(),
+                        image: image,
                         speed: this.deriveSpeed(this.props.depth),
                         scale: this.deriveSize(this.props.depth)
                     };
@@ -39,7 +41,7 @@ export default class Cloud extends React.Component {
     }
 
     deriveSpeed(depth) {
-        let speed = this.lerp(MIN_DRIFT, MAX_DRIFT, depth);
+        let speed = this.lerp(MIN_DRIFT, MAX_DRIFT, 1 - depth);
 
         var viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
@@ -60,13 +62,13 @@ export default class Cloud extends React.Component {
 
     render() {
         const styles = { 
-            position: 'relative',  
+            position: 'absolute',  
             animation: `slide ${this.state.speed}s linear infinite`,
             animationDelay: `-${this.state.speed * this.props.xOffset}s`,
             transform: `scale(${this.state.scale}, ${this.state.scale})`,
             msTransform: `scale(${this.state.scale}, ${this.state.scale})`,
             WebkitTransform: `scale(${this.state.scale}, ${this.state.scale})`,
-            top: `${this.props.yOffset}%`
+            top: `${this.props.yOffset}vh`
         };
 
         return (
@@ -78,5 +80,8 @@ export default class Cloud extends React.Component {
 }
 
 Cloud.propTypes = {
-    depth: PropTypes.number.isRequired
+    cloudType: PropTypes.number,
+    depth: PropTypes.number.isRequired,
+    xOffset: PropTypes.number.isRequired,
+    yOffset: PropTypes.number.isRequired
 };
